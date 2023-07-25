@@ -36,4 +36,33 @@ else {console.log(false);}
 
 console.log(a==6 ? "true":"false");
 
-console.log(6+ 'asd');
+console.log(6+ 'aasdsd');
+console.log(fw);
+var fw;
+fw=7777;
+console.log(fw);
+
+const mm=50;
+const randomNum =Math.floor(Math.random() * 60)+50;
+if(mm >= randomNum){
+    console.log('greater than');
+    console.log(randomNum);
+}
+else if (mm == randomNum){
+    console.log('equal');
+    console.log(randomNum);
+}
+else {
+    console.log('smaller')
+    console.log(randomNum);
+}
+let name =["jeniss","Sahansss","Munassss","Shyamss"];
+const randomName = Math.floor(Math.random() * 5)+1;
+console.log(randomName);
+
+if(randomName <=5 ){
+    console.log(name.filter(randomName));
+}else{
+    console.log(name);
+}
+
