@@ -91,32 +91,81 @@ let name = ["jeniss", "Sahansss", "Munassss", "Shyamss"];
 //     console.log('negative');
 // }
 
+// let users = [
+//   {
+//     name: prompt("enter a name"),
+//     age: prompt("Enter age"),
+//   },
+// ];
+// users.map((user) => {
+//   if (user.age >= 18) {
+//     console.log(user);
+//     console.log("eligible to vote");
+//   } else {
+//     console.log(user);
+//     console.log("not eligible");
+//   }
+// });
 
-
-let users = [
-  {
-    name: prompt("enter a name"),
-    age: prompt("Enter age"),
-  }
-];
-users.map(user => {
-    if(user.age >=18){
-        console.log(user);
-   console.log("eligible to vote")
-    }
-    else{
-        console.log(user);
-        console.log("not eligible")
-    }
-
-});
-
-// let year = Number(prompt("enter a number"));
+// let year = Number(prompt("enter a year"));
 // if(year % 4 === 0 && year %100 !== 0 || year %400 === 0) {
-//     console.log("leap year");
+//     console.log(`${year} is leap year`);
 // }
 // else{
-//     console.log("not a leap year")
+//     console.log(`${year} is not a leap year`)
 // }
 
+// let mark = Number(prompt("enter your marks"));
+// if (mark >= 90 && mark <= 100) {
+//   console.log("Your Grade is A with your mark-" + mark);
+// } else if (mark >= 80 && mark < 90) {
+//   console.log("Your Grade is B with your mark-" + mark);
+// } else if (mark >= 70 && mark < 80) {
+//   console.log("Your Grade is C with your mark-" + mark);
+// } else if (mark >= 60 && mark < 70) {
+//   console.log("Your Grade is D with your mark-" + mark);
+// }
+// if (mark >= 0 && mark < 60) {
+//   console.log("Your Grade is E with your mark-" + mark);
+// }
 
+let jg = ["naasde", "side"];
+if (Array.isArray(jg)) {
+  console.log("is array");
+} else {
+  console.log("isnot array");
+}
+if (typeof jg === "object") {
+  console.log("is array");
+} else {
+  console.log("isnot array");
+}
+
+// discount in if else
+let purchase = 5020;
+let disount;
+if (purchase > 100) {
+  disount = purchase * (10 / 100);
+  console.log(purchase - disount);
+} else {
+  disount = purchase * (5 / 100);
+  console.log(purchase - disount);
+}
+
+// next way in switch case
+let purhaseAmt = 22;
+switch (true) {
+  case (purhaseAmt < 100):
+    disountAmt = purhaseAmt * 0.05;
+    console.log(`discount is ${disountAmt}`);
+    console.log(purhaseAmt - disountAmt);
+    break;
+  case (purhaseAmt > 100):
+    disountAmt = purhaseAmt * 0.1;
+    console.log(`discount is ${disountAmt}`);
+    console.log(purhaseAmt - disountAmt);
+    break;
+  default:
+   console.log("NOt value found");
+   break;
+}
