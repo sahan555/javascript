@@ -156,7 +156,7 @@ if (purchase > 100) {
 let purhaseAmt = 22;
 switch (true) {
   case (purhaseAmt < 100):
-    disountAmt = purhaseAmt * 0.05;
+    let disountAmt = purhaseAmt * 0.05;
     console.log(`discount is ${disountAmt}`);
     console.log(purhaseAmt - disountAmt);
     break;
@@ -169,3 +169,4 @@ switch (true) {
    console.log("NOt value found");
    break;
 }
+
