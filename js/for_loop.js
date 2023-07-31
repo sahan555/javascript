@@ -90,5 +90,26 @@ for (i = 1; i <= 5; i++) {
 let row = "";
 for (let j = 1; j <= 5; j++) {
   row += "*";
-console.log(row);
+  console.log(row);
 }
+let descending = 1;
+let desRecord = [];
+i = 10;
+while (i >= 1) {
+  console.log(i);
+  desRecord.push(i);
+  i--;
+}
+console.log(desRecord);
+desRecord.sort();
+console.log(desRecord);
+
+// factorial= Number(prompt("enter a number"));
+factorial= 1;
+// let savFactorial= Number(prompt("enter a number"));
+let savFactorial= 6;
+console.log(savFactorial) ;
+for(i = 1;i <= savFactorial;i++){
+  factorial*=i;
+}
+console.log(factorial);
