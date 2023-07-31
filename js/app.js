@@ -93,23 +93,23 @@ let name = ["jeniss", "Sahansss", "Munassss", "Shyamss"];
 
 
 
-let users = [
-  {
-    name: prompt("enter a name"),
-    age: prompt("Enter age"),
-  }
-];
-users.map(user => {
-    if(user.age >=18){
-        console.log(user);
-   console.log("eligible to vote")
-    }
-    else{
-        console.log(user);
-        console.log("not eligible")
-    }
+// let users = [
+//   {
+//     name: prompt("enter a name"),
+//     age: prompt("Enter age"),
+//   }
+// ];
+// users.map(user => {
+//     if(user.age >=18){
+//         console.log(user);
+//    console.log("eligible to vote")
+//     }
+//     else{
+//         console.log(user);
+//         console.log("not eligible")
+//     }
 
-});
+// });
 
 // let year = Number(prompt("enter a number"));
 // if(year % 4 === 0 && year %100 !== 0 || year %400 === 0) {
