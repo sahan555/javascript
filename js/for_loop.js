@@ -92,6 +92,7 @@ for (let j = 1; j <= 5; j++) {
   row += "*";
   console.log(row);
 }
+
 let descending = 1;
 let desRecord = [];
 i = 10;
@@ -105,11 +106,99 @@ desRecord.sort();
 console.log(desRecord);
 
 // factorial= Number(prompt("enter a number"));
-factorial= 1;
+factorial = 1;
 // let savFactorial= Number(prompt("enter a number"));
-let savFactorial= 6;
-console.log(savFactorial) ;
-for(i = 1;i <= savFactorial;i++){
-  factorial*=i;
+let savFactorial = 6;
+console.log(savFactorial);
+for (i = 1; i <= savFactorial; i++) {
+  factorial *= i;
 }
 console.log(factorial);
+
+console.log(3 + 3);
+console.log("3" + "3");
+console.log("3" + +3);
+console.log(3 + +"3");
+console.log(3 + 3 - 3);
+console.log("3" + "3" - "3");
+
+for (i = 5; i >= 1; i--) {
+  let row = "";
+  for (let j = 1; j <= i; j++) {
+    row += '*';
+  }
+  console.log(row);
+}
+
+greet("Ramshree");
+function greet(name){
+  console.log("Hello," + name + "!");
+}
+greet("Ramcha");
+
+function myAdd(a,b){
+return a + b;
+}
+// a = Number(prompt("Enter a Number"));
+// b =Number(prompt("Enter a Number"));
+a=44;
+b=40;
+let addResult =myAdd(a,b);
+console.log("The add of a(" + a +") + b(" + b + ") = " +addResult);
+
+// anonymous function
+const squares = function(x){
+  return x**3;
+};
+console.log(squares(5));
+
+let multiply =(a,b) => a*b;
+console.log(multiply(12,45));
+
+function* numberGenerator(){
+  yield 1;
+  yield 2;
+  yield 3;
+  yield 4;
+}
+const generator = numberGenerator();
+console.log(generator.next().value);
+console.log(generator.next().value);
+console.log(generator.next().value);
+console.log(generator.next().value);
+// call back function
+function add(a,b){
+  return a+b;
+}
+function sumTotal(add){
+  return add;
+}
+function sub(a,b){
+  return a- b;
+}
+function minus(sub){
+  return sub;
+}
+
+const minusResult= minus(sub(70,44));
+console.log(minusResult);
+
+function calc(sumTotal){
+  return(sumTotal)
+}
+function calc(minus){
+  return(minus)
+}
+let calcResult =calc(sumTotal(add(5,6)));
+console.log(calcResult);
+calcResult =calc(minus(sub(5,6)));
+console.log(calcResult);
+
+
+function calcsa(a,b,callback){
+  return callback(a,b);
+}
+let calcsaResult = calcsa(55,45,sub);
+console.log(calcsaResult);
+calcsaResult = calcsa(55,45,add);
+console.log(calcsaResult);
