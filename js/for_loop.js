@@ -125,37 +125,37 @@ console.log("3" + "3" - "3");
 for (i = 5; i >= 1; i--) {
   let row = "";
   for (let j = 1; j <= i; j++) {
-    row += '*';
+    row += "*";
   }
   console.log(row);
 }
 
 greet("Ramshree");
-function greet(name){
+function greet(name) {
   console.log("Hello," + name + "!");
 }
 greet("Ramcha");
 
-function myAdd(a,b){
-return a + b;
+function myAdd(a, b) {
+  return a + b;
 }
 // a = Number(prompt("Enter a Number"));
 // b =Number(prompt("Enter a Number"));
-a=44;
-b=40;
-let addResult =myAdd(a,b);
-console.log("The add of a(" + a +") + b(" + b + ") = " +addResult);
+a = 44;
+b = 40;
+let addResult = myAdd(a, b);
+console.log("The add of a(" + a + ") + b(" + b + ") = " + addResult);
 
 // anonymous function
-const squares = function(x){
-  return x**3;
+const squares = function (x) {
+  return x ** 3;
 };
 console.log(squares(5));
 
-let multiply =(a,b) => a*b;
-console.log(multiply(12,45));
+let multiply = (a, b) => a * b;
+console.log(multiply(12, 45));
 
-function* numberGenerator(){
+function* numberGenerator() {
   yield 1;
   yield 2;
   yield 3;
@@ -166,39 +166,89 @@ console.log(generator.next().value);
 console.log(generator.next().value);
 console.log(generator.next().value);
 console.log(generator.next().value);
+
 // call back function
-function add(a,b){
-  return a+b;
+function add(a, b) {
+  return a + b;
 }
-function sumTotal(add){
+function sumTotal(add) {
   return add;
 }
-function sub(a,b){
-  return a- b;
+function sub(a, b) {
+  return a - b;
 }
-function minus(sub){
+function minus(sub) {
   return sub;
 }
-
-const minusResult= minus(sub(70,44));
+function mixResult(add, sub) {
+  return [add, sub];
+}
+const mixResultGiver = mixResult(add(5, 6), sub(66, 4));
+console.log(mixResultGiver);
+const minusResult = minus(sub(70, 44));
 console.log(minusResult);
+sub, add;
 
-function calc(sumTotal){
-  return(sumTotal)
+function calc(sumTotal) {
+  return sumTotal;
 }
-function calc(minus){
-  return(minus)
+function calc(minus) {
+  return minus;
 }
-let calcResult =calc(sumTotal(add(5,6)));
+let calcResult = calc(sumTotal(add(5, 6)));
 console.log(calcResult);
-calcResult =calc(minus(sub(5,6)));
+calcResult = calc(minus(sub(5, 6)));
 console.log(calcResult);
 
-
-function calcsa(a,b,callback){
-  return callback(a,b);
+function calcsa(a, b, callback) {
+  return callback(a, b);
 }
-let calcsaResult = calcsa(55,45,sub);
+let calcsaResult = calcsa(55, 45, sub);
 console.log(calcsaResult);
-calcsaResult = calcsa(55,45,add);
+calcsaResult = calcsa(55, 45, add);
 console.log(calcsaResult);
+
+//Asynochorous with callback
+
+function fetehData(callback) {
+  setTimeout(function () {
+    let data = "some data";
+    callback(data);
+  }, 200);
+}
+fetehData(function (data) {
+  console.log(data);
+});
+
+function fetchDatafromServer() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const data = { name: "same", age: 50 };
+      resolve(data);
+    }, 1000);
+  });
+}
+
+//sync fuction
+fetchDatafromServer()
+.then((vData) => {
+  console.log("fetchdata:", vData);
+})
+.catch((error) => {
+  console.error("Error fetching data:",error);
+});
+
+
+
+//async fuctuon
+async function fetchssdata() {
+  try{
+    const data = await fetchDatafromServer();
+    console.log("fetched data:",data);
+  }
+  catch(error){
+    console.error("Error fetching data:",error);
+  }
+}
+fetchssdata();
+console.log("this data will print first becasue of awit in async function");
