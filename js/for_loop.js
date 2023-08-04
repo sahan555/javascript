@@ -252,3 +252,4 @@ async function fetchssdata() {
 }
 fetchssdata();
 console.log("this data will print first becasue of awit in async function");
+
