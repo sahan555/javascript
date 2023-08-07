@@ -210,46 +210,76 @@ console.log(calcsaResult);
 
 //Asynochorous with callback
 
-function fetehData(callback) {
-  setTimeout(function () {
-    let data = "some data";
-    callback(data);
-  }, 200);
-}
-fetehData(function (data) {
-  console.log(data);
-});
+// function fetehData(callback) {
+//   setTimeout(function () {
+//     let data = "some data";
+//     callback(data);
+//   }, 0);
+// }
+// fetehData(function (data) {
+//   console.log(data);
+// });
 
-function fetchDatafromServer() {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      const data = { name: "same", age: 50 };
-      resolve(data);
-    }, 1000);
-  });
-}
+// function fetchDatafromServer() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       const data = { name: "same", age: 50 };
+//       resolve(data);
+//     }, 0);
+//   });
+// }
 
 //sync fuction
-fetchDatafromServer()
-.then((vData) => {
-  console.log("fetchdata:", vData);
-})
-.catch((error) => {
-  console.error("Error fetching data:",error);
-});
-
-
+// fetchDatafromServer()
+//   .then((vData) => {
+//     console.log("fetchdata:", vData);
+//   })
+//   .catch((error) => {
+//     console.error("Error fetching data:", error);
+//   });
 
 //async fuctuon
-async function fetchssdata() {
-  try{
-    const data = await fetchDatafromServer();
-    console.log("fetched data:",data);
-  }
-  catch(error){
-    console.error("Error fetching data:",error);
+// async function fetchssdata() {
+//   try {
+//     const data = await fetchDatafromServer();
+//     console.log("fetched data:", data);
+//   } catch (error) {
+//     console.error("Error fetching data:", error);
+//   }
+// }
+// fetchssdata();
+// console.log("this data will print first becasue of awit in async function");
+
+let bigNum = [];
+for (i = 0; i < 100; i++) {
+  bigNum.push(i);
+}
+console.log(bigNum);
+for (i = 0; i < 100; i++) {
+  // if (bigNum[i] % 3 == 0) {
+  //   console.log("buzz");
+  // } else if (bigNum[i] % 5 == 0) {
+  //   console.log("kill");
+  // } 
+  if (bigNum[i] % 3 ==0 && bigNum[i] % 5==0) {
+    console.log("buzzKill",bigNum[i]);
+  } else {
+    continue;
   }
 }
-fetchssdata();
-console.log("this data will print first becasue of awit in async function");
+multiThree = bigNum.filter((num) => num % 3 == 0);
+console.log(multiThree);
 
+const arrayOfObjects =[
+  {name:'Ramcha',age:44},
+ { name:'asda',age:42134},
+  {name:'asd',age:442},
+  {name:'rwqe',age:424}
+]
+const names=arrayOfObjects.map(obj => obj);
+console.log(names);
+console.log(names[0]);
+console.log(names[0].name);
+console.log(names[0].age);
+const ages=arrayOfObjects.map(obj => obj.age);
+console.log(ages);

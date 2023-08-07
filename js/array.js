@@ -21,7 +21,8 @@ const key = Object.keys(person).find(key => key === 'age');
 console.log(key);
 console.log(person[key]);
 
-
+// person.map(person => console.log(person));
+console.log(person);
 
 
 const numbers = [3,5,7,9,1,2];
@@ -65,3 +66,5 @@ for(let i = 0; i<=5;i++){
         console.log(names[i]);
     }
 }
+
+
