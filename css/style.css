@@ -1,0 +1,67 @@
+body {
+  font-family: "Work Sans", sans-serif;
+}
+header {
+  display: flex;
+}
+header ul {
+  list-style: none;
+}
+header ul li {
+  display: inline-block;
+  text-transform: capitalize;
+}
+header ul li a {
+  display: inline-block;
+  border: 1px dotted #666;
+  padding: 8px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.form-bg {
+  background-color: #a22b56;
+  max-width: 600px;
+  padding: 40px;
+  border-radius: 74% 26% 91% 9% / 0% 46% 54% 100%;
+}
+.form-bg form {
+  background-color: #74203e;
+  padding: 30px;
+  border-radius: 80% 22% 100% 7% / 7% 53% 47% 83%;
+  color: #fff;
+}
+.form-bg form .form-group:not(:last-child) {
+  margin-bottom: 16px;
+}
+.form-bg form label {
+  min-width: 120px;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 15px;
+  text-transform: capitalize;
+}
+.form-bg form input,
+.form-bg form select,
+.form-bg form textarea {
+  height: 30px;
+  border-radius: 6px;
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.form-bg form textarea {
+  height: auto;
+  box-sizing: border-box;
+}
+.form-bg form select,
+.form-bg form textarea {
+  min-width: 173px;
+}
+.form-bg form input[type="radio"] {
+  height: auto;
+
+}
+.form-bg form button {
+    padding: 8px 121px;
+}
