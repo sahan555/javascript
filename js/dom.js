@@ -56,3 +56,10 @@ inputElement.setAttribute("value",inputElement.value);
 console.log(inputElement.getAttribute("value"));
 inputElement.setAttribute("style","color:red");
 console.log()
+
+let stringReverse ="Hellooo";
+console.log(stringReverse);
+for(i=stringReverse;i >=0;i--){
+// let strReceiver += i;
+    // console.log(strReceiver);
+}
