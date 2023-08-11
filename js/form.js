@@ -17,4 +17,16 @@ eyeIcon.addEventListener("click", function () {
 form.addEventListener("submit", function (e) {
     e.preventDefault();
     const name =document.getElementById('name').value;                
+    const email =document.getElementById('email').value;   
+    const password = passwordInput.value;
+    if (name === '') {
+      alert('Please enter your name.');
+      return;
+    };
+    submitForm();
+
 });
+function submitForm() {
+  // Here, you can submit the form data using AJAX or perform any other actions
+  alert('Form submitted successfully!');
+}
