@@ -16,17 +16,13 @@ eyeIcon.addEventListener("click", function () {
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  const name = document.getElementById("name");
+  const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
   const password = passwordInput.value;
 
-  if (name.value === ''|| name.value == null) {
+  if (name === ''|| name == null) {
     // alert('Please enter your name.');;
-    const newspan = document.createElement("span");
-    name.parentElement.append(newspan);
-    newspan.classList = 'error';
-    newspan.innerHTML = 'please enter';
-
+    alert('Please enter your name.');
     return;
   }
 
@@ -40,11 +36,34 @@ form.addEventListener("submit", function (e) {
   }
   const regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
   if(!regex.test(password)) {
-    passwordInput.setCustomValidity('Password should be 8 characters long along with one special character, one number and one capital letter');
+    alert('Password should be 8 characters long along with one special character, one number and one capital letter');
     return;
   }
   submitForm();
 });
 function submitForm() {
-  alert("Form submitted successfully!");
-}
+    // Get the form data
+    const formData = {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+      // Add other form fields as needed
+    };
+  
+    // Save the form data to Local Storage
+    localStorage.setItem('registrationData', JSON.stringify(formData));
+  
+    // Show a success message
+    alert('Form submitted successfully!');
+  
+    // Optionally, you can reset the form fields
+    document.getElementById('form_id').reset();
+  }
+  
+// Retrieve stored data from Local Storage
+const storedData = localStorage.getItem('registrationData');
+
+// if (storedData) {
+//   const formData = JSON.parse(storedData);
+//   // Use the formData as needed
+// }
+
